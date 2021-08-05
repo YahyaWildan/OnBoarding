@@ -9,10 +9,10 @@
     <color name="white">#FFFFFFFF</color>
 
     //custom color
-    <color name="custom_color_primary">#008009</color>
-    <color name="custom_color_secondary">#FF8F00</color>
-    <color name="custom_color_secondary_light">#FFD299</color>
+    <color name="custom_color_primary">#FC721B</color>
+    <color name="custom_color_primary_light">#FCA61B</color>
+    <color name="custom_color_secondary">#FED244</color>
+    <color name="custom_color_secondary_light">#FFEF5F</color>
     <color name="custom_text_secondary">#464747</color>
-
 
 </resources>

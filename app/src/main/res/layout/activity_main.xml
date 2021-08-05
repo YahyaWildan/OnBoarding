@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/custom_color_primary"
+    android:background="@color/black"
     tools:context=".MainActivity">
 
     <androidx.viewpager2.widget.ViewPager2
@@ -19,24 +19,11 @@
         android:id="@+id/indicatorsContainer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginBottom="64dp"
         android:orientation="horizontal"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/textSkip"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:layout_marginEnd="20dp"
-        android:text="@string/skip"
-        android:textColor="@color/custom_color_primary"
-        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@id/onboardingViewPager"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
+        app:layout_constraintStart_toStartOf="parent" />
 
     <View
         android:layout_width="55dp"
@@ -79,6 +66,7 @@
         android:paddingEnd="40dp"
         android:text="@string/txt_get_started"
         android:textAllCaps="false"
+        android:textColor="@color/black"
         android:textSize="14sp"
         android:textStyle="bold"
         app:cornerRadius="20dp"

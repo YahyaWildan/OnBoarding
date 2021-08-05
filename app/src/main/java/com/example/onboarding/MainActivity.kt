@@ -27,65 +27,63 @@ class MainActivity : AppCompatActivity() {
         setCurrentIndicator(0)
     }
 
-    private fun setOnboardingItems(){
+    private fun setOnboardingItems() {
         onboardingItemAdapter = OnnboardingItemAdapter(
                 listOf(
                         OnboardingItem(
-                               onboardingImage =  R.drawable.ic_navigation_two,
-                                title = "Lokasi GPS Akurat ",
-                                description = "Lokasi GPS yang akurat menjadikan adzan tepat waktu dimanapun kita berada."
+                                onboardingImage = R.drawable.gf,
+                                title = "BRAGA CLUB",
+                                description = "Musuh Hinata"
                         ),
                         OnboardingItem(
-                               onboardingImage =  R.drawable.ic_studi1,
-                                title = " Pembelajaran Terstruktur ",
-                                description = "Pembelajaran terstruktur berdasarkan kategori ilmu dalam islam."
+                                onboardingImage = R.drawable.game,
+                                title = "Gaming Community",
+                                description = "Mobile Legend"
                         ),
                         OnboardingItem(
-                               onboardingImage =  R.drawable.ic_engine,
-                                title = "Fitur Lengkap ",
-                                description = "Bayar ZISWAF dengan mudah,aman dan terpercaya."
+                                onboardingImage = R.drawable.visi,
+                                title = "VISI MISI",
+                                description = "Troll Dan KS Kill Teman"
                         )
                 )
         )
         val onboardingViewPager = findViewById<ViewPager2>(R.id.onboardingViewPager)
         onboardingViewPager.adapter = onboardingItemAdapter
         onboardingViewPager.registerOnPageChangeCallback(object :
-        ViewPager2.OnPageChangeCallback(){
+                ViewPager2.OnPageChangeCallback() {
             override fun onPageSelected(position: Int) {
                 super.onPageSelected(position)
                 setCurrentIndicator(position)
             }
         })
-        (onboardingViewPager.getChildAt(0) as RecyclerView). overScrollMode =
+        (onboardingViewPager.getChildAt(0) as RecyclerView).overScrollMode =
                 RecyclerView.OVER_SCROLL_NEVER
         findViewById<ImageView>(R.id.imageNext).setOnClickListener {
-            if (onboardingViewPager.currentItem + 1 < onboardingItemAdapter.itemCount){
-                onboardingViewPager.currentItem +=1
-            }else{
-                navigateToHomeActivity()
+            if (onboardingViewPager.currentItem + 1 < onboardingItemAdapter.itemCount) {
+                onboardingViewPager.currentItem += 1
+            } else {
+                navigateToLoginRegisterActivity()
             }
         }
-        findViewById<TextView>(R.id.textSkip).setOnClickListener {
-            navigateToHomeActivity()
-        }
+
         findViewById<MaterialButton>(R.id.buttonGetStarted).setOnClickListener {
-            navigateToHomeActivity()
+            navigateToLoginRegisterActivity()
         }
 
     }
 
-    private fun navigateToHomeActivity(){
-        startActivity(Intent(applicationContext,HomeActivity::class.java))
+    private fun navigateToLoginRegisterActivity() {
+        startActivity(Intent(applicationContext, LoginRegisterActivity::class.java))
         finish()
     }
 
-    private fun setupIndicator(){
+    private fun setupIndicator() {
         indicatorsContainer = findViewById(R.id.indicatorsContainer)
         val indicators = arrayOfNulls<ImageView>(onboardingItemAdapter.itemCount)
-        val layoutParams : LinearLayout.LayoutParams =
+        val layoutParams: LinearLayout.LayoutParams =
                 LinearLayout.LayoutParams(WRAP_CONTENT, WRAP_CONTENT)
-        layoutParams.setMargins(8,0,8,0)
-        for (i in indicators.indices){
+        layoutParams.setMargins(24, 0, 24, 0)
+        for (i in indicators.indices) {
             indicators[i] = ImageView(applicationContext)
             indicators[i]?.let {
                 it.setImageDrawable(
@@ -100,18 +98,18 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    private fun setCurrentIndicator(position: Int){
+    private fun setCurrentIndicator(position: Int) {
         val childCount = indicatorsContainer.childCount
-        for (i in 0 until childCount){
+        for (i in 0 until childCount) {
             val imageView = indicatorsContainer.getChildAt(i) as ImageView
-            if (i == position){
+            if (i == position) {
                 imageView.setImageDrawable(
                         ContextCompat.getDrawable(
                                 applicationContext,
                                 R.drawable.indicator_active_background
                         )
                 )
-            }else{
+            } else {
                 imageView.setImageDrawable(
                         ContextCompat.getDrawable(
                                 applicationContext,

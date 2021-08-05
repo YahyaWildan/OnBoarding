@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "686296562379",
+    "project_id": "fir-griffins",
+    "storage_bucket": "fir-griffins.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:686296562379:android:47603dcc4132fcbe30b94e",
+        "android_client_info": {
+          "package_name": "com.example.onboarding"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "686296562379-r7e1h8iv94tb5hatu3fg83n15pn9b4gh.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.onboarding",
+            "certificate_hash": "45d46e80262fa54a12444c861d527c20aa5c06b5"
+          }
+        },
+        {
+          "client_id": "686296562379-n37jlauaukef41njbbjhl6f5qn8uhlq7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCTkFG5qnltkEefmUaUCYKvSDTrQbuKVlk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "686296562379-n37jlauaukef41njbbjhl6f5qn8uhlq7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

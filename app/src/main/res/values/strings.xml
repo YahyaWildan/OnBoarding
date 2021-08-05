@@ -1,5 +1,14 @@
 <resources>
-    <string name="app_name">Onboarding</string>
+    <string name="app_name">Griffins</string>
     <string name="txt_get_started">Get Started</string>
     <string name="skip">Skip</string>
+    <string name="txt_griffins">GRIFFINS</string>
+    <string name="txt_registration">Registration</string>
+    <string name="txt_login">Login</string>
+    <string name="txt_nama">Nama</string>
+    <string name="txt_username">Username</string>
+    <string name="txt_password">Password</string>
+    <string name="txt_email">Email</string>
+    <string name="txt_submit">Submit</string>
+    <string name="txt_welcome">Welcome</string>
 </resources>
